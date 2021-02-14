@@ -1,0 +1,148 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.header {
+  border-bottom: 1px #d4d4d4 solid;
+  text-align: center;
+  padding: 14px 10px;
+}
+
+.container {
+  /* border: 1px red solid; */
+  max-width: 800px;
+  width: 100%;
+  margin: auto;
+  padding: 14px;
+}
+
+.header .title {
+  color: #133337;
+  font-family: 'Reggae One', cursive;
+  font-size: 32px;
+}
+
+.main {
+  /* border: 1px green solid; */
+  padding: 10px;
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px;
+}
+
+.main .input,
+.main .output {
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main .input .title,
+.main .output .title {
+  background-color: black;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px;
+}
+
+.main .input .input-area {
+  border-top: none;
+  border-right: 1px #d4d4d4 solid;
+  border-bottom: 1px #d4d4d4 solid;
+  border-left: 1px #d4d4d4 solid;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  padding: 12px;
+  width: 100%;
+  height: 100%;
+  resize: none;
+  outline: none;
+}
+
+.main .input .input-area::placeholder {
+  color: #b8b8b8;
+}
+
+.main .output .output-area {
+  border-top: none;
+  border-right: 1px #d4d4d4 solid;
+  border-bottom: 1px #d4d4d4 solid;
+  border-left: 1px #d4d4d4 solid;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  padding: 12px;
+  width: 100%;
+  height: 100%;
+}
+
+.about {
+  /* border: 1px green solid; */
+  padding: 10px;
+}
+
+.about .content {
+  color: #585858;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 40px;
+  text-align: justify;
+}
+
+.about .content span {
+  color: black;
+  font-weight: 600;
+}
+
+.about .content a {
+  color: #585858;
+  text-decoration: underline 2px #585858 solid;
+}
+
+.about .ext-link {
+  border: 1px #b8b8b8 solid;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  width: fit-content;
+  margin: 0 auto 20px;
+}
+
+.about .ext-link .git {
+  margin-right: 12px;
+}
+
+.footer {
+  border-top: 1px #d4d4d4 solid;
+  padding: 24px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.footer a {
+  text-decoration: underline 2px black solid;
+}
+
+@media (hover: hover) {
+  .about .ext-link {
+    transition: all 0.3s ease;
+  }
+
+  .about .ext-link:hover {
+    background-color: black;
+    color: white;
+  }
+}
