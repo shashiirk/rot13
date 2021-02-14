@@ -1,3 +1,6 @@
+const inputArea = document.querySelector('.input-area');
+const outputArea = document.querySelector('.output-area');
+
 // Returns a ROT13 encoded/decoded string
 function rot13(str) {
   // To store encoded/decoded characters
@@ -34,3 +37,17 @@ function rot13(str) {
   // Converts array to string and returns it
   return codedStringArray.join('');
 }
+
+// Scroll to the bottom of outputArea
+function scrollToBottom() {
+  outputArea.scrollTop = outputArea.scrollHeight;
+}
+
+// Generate result from input
+function inputHandler() {
+  outputArea.innerText = rot13(inputArea.value);
+  scrollToBottom();
+}
+
+// Listen to input event on inputArea
+inputArea.addEventListener('input', inputHandler);

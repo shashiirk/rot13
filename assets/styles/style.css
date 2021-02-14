@@ -6,6 +6,7 @@
 
 body {
   font-family: 'Work Sans', sans-serif;
+  -webkit-tap-highlight-color: transparent;
 }
 
 a {
@@ -20,7 +21,6 @@ a {
 }
 
 .container {
-  /* border: 1px red solid; */
   max-width: 800px;
   width: 100%;
   margin: auto;
@@ -34,12 +34,11 @@ a {
 }
 
 .main {
-  /* border: 1px green solid; */
   padding: 10px;
   margin: 20px 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 4px;
+  gap: 8px;
 }
 
 .main .input,
@@ -86,15 +85,30 @@ a {
   padding: 12px;
   width: 100%;
   height: 100%;
+  overflow: auto;
+}
+
+.main .input .input-area::-webkit-scrollbar-track,
+.main .output .output-area::-webkit-scrollbar-track {
+  background-color: white;
+}
+
+.main .input .input-area::-webkit-scrollbar,
+.main .output .output-area::-webkit-scrollbar {
+  width: 4px;
+}
+
+.main .input .input-area::-webkit-scrollbar-thumb,
+.main .output .output-area::-webkit-scrollbar-thumb {
+  background-color: #b0b0b0;
 }
 
 .about {
-  /* border: 1px green solid; */
   padding: 10px;
 }
 
 .about .content {
-  color: #585858;
+  color: #606060;
   font-size: 18px;
   font-weight: 400;
   margin-bottom: 40px;
@@ -107,8 +121,7 @@ a {
 }
 
 .about .content a {
-  color: #585858;
-  text-decoration: underline 2px #585858 solid;
+  color: black;
 }
 
 .about .ext-link {
@@ -127,16 +140,18 @@ a {
 
 .footer {
   border-top: 1px #d4d4d4 solid;
+  color: #808080;
   padding: 24px;
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: 500;
   text-align: center;
 }
 
-.footer a {
-  text-decoration: underline 2px black solid;
-}
-
 @media (hover: hover) {
+  .about .content a:hover {
+    text-decoration: underline 2px black dotted;
+  }
+
   .about .ext-link {
     transition: all 0.3s ease;
   }
@@ -144,5 +159,29 @@ a {
   .about .ext-link:hover {
     background-color: black;
     color: white;
+  }
+
+  .footer a:hover {
+    text-decoration: underline 2px black dotted;
+  }
+}
+
+@media (hover: none) {
+  .about .content a:active {
+    text-decoration: underline 2px black dotted;
+  }
+
+  .about .ext-link:active {
+    background-color: #b8b8b8;
+  }
+
+  .footer a:active {
+    text-decoration: underline 2px black dotted;
+  }
+}
+
+@media (max-width: 500px) {
+  .main {
+    grid-template-columns: 1fr;
   }
 }
