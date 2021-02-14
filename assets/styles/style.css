@@ -5,6 +5,7 @@
 }
 
 body {
+  background-color: white;
   font-family: 'Work Sans', sans-serif;
   -webkit-tap-highlight-color: transparent;
 }
@@ -75,6 +76,7 @@ a {
 }
 
 .main .output .output-area {
+  background-color: white;
   border-top: none;
   border-right: 1px #d4d4d4 solid;
   border-bottom: 1px #d4d4d4 solid;
