@@ -13,6 +13,8 @@ ROT13 is a simple letter substitution cipher that replaces a letter with the 13t
 
 ## Preview
 
+![preview](https://user-images.githubusercontent.com/48406108/136221829-6d9cd27e-66db-407f-84a0-633e45f138fc.gif)
+
 ## Live Demo
 
 See it live [here](https://shashiirk.github.io/rot13).
