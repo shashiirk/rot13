@@ -6,62 +6,68 @@
 
 body {
   background-color: white;
-  font-family: 'Work Sans', sans-serif;
+  color: #374151;
+  font-family: 'Roboto', sans-serif;
   -webkit-tap-highlight-color: transparent;
 }
 
 a {
   text-decoration: none;
-  color: black;
+  color: inherit;
 }
 
 .header {
-  text-align: center;
-  padding: 14px 10px;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 16px;
 }
 
 .header .title {
-  font-family: 'Reggae One', cursive;
-  font-size: 32px;
+  font-size: 42px;
+  font-weight: 500;
+  line-height: 1;
 }
 
 .container {
-  max-width: 800px;
+  max-width: 860px;
   width: 100%;
-  margin: auto;
-  padding: 14px;
+  margin: 32px auto;
+  padding: 0 16px;
 }
 
 .main {
-  padding: 10px;
-  margin: 20px 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
+  gap: 16px;
+  margin-bottom: 64px;
 }
 
 .main .input,
 .main .output {
-  height: 280px;
+  height: 320px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  border: 1px #374151 solid;
+  border-radius: 8px;
+  box-shadow: 2px 2px 0 0 #374151;
 }
 
 .main .input .title,
 .main .output .title {
-  background-color: black;
-  color: white;
+  color: #7c3aed;
   font-size: 18px;
   font-weight: 500;
-  padding: 8px;
+  padding: 16px;
+  border-bottom: 1px #374151 solid;
 }
 
 .main .input .input-area {
   font-family: 'Roboto Mono', sans-serif;
   font-size: 16px;
-  padding: 12px;
+  padding: 16px;
   width: 100%;
   height: 100%;
   resize: none;
@@ -70,14 +76,14 @@ a {
 }
 
 .main .input .input-area::placeholder {
-  color: #b8b8b8;
+  color: #9ca3af;
 }
 
 .main .output .output-area {
   background-color: white;
   font-family: 'Roboto Mono', sans-serif;
   font-size: 16px;
-  padding: 12px;
+  padding: 16px;
   width: 100%;
   height: 100%;
   border: none;
@@ -96,85 +102,67 @@ a {
 
 .main .input .input-area::-webkit-scrollbar-thumb,
 .main .output .output-area::-webkit-scrollbar-thumb {
-  background-color: #b0b0b0;
+  background-color: #b1b5bb;
 }
 
 .about {
-  padding: 10px;
+  border: 1px #374151 solid;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 0 0 #374151;
+}
+
+.about .title {
+  color: #7c3aed;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 16px;
 }
 
 .about .content {
-  color: #606060;
-  font-size: 18px;
+  color: #6b7280;
   font-weight: 400;
-  margin-bottom: 40px;
-  text-align: justify;
-  line-height: 1.4;
-}
-
-.about .content span {
-  color: black;
-  font-weight: 600;
+  line-height: 1.6;
 }
 
 .about .content a {
-  color: black;
-}
-
-.about .ext-link {
-  border: 1px #b8b8b8 solid;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  width: fit-content;
-  margin: 0 auto 20px;
-}
-
-.about .ext-link .git {
-  margin-right: 12px;
+  text-decoration: underline 1px #6b7280 solid;
 }
 
 .footer {
-  border-top: 1px #d4d4d4 solid;
-  border-bottom: 1px #d4d4d4 solid;
-  color: #808080;
-  padding: 20px;
-  font-size: 16px;
-  font-weight: 500;
+  padding: 32px 16px;
+  font-size: 14px;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer .foot {
   text-align: center;
 }
 
+.footer .dot {
+  width: 3px;
+  height: 3px;
+  background-color: black;
+  border-radius: 50%;
+  margin: 0 6px;
+}
+
 @media (hover: hover) {
-  .about .content a:hover {
-    text-decoration: underline 2px black dotted;
-  }
-
-  .about .ext-link {
-    transition: all 0.3s ease;
-  }
-
-  .about .ext-link:hover {
-    background-color: black;
-    color: white;
+  .footer a {
+    transition: color 200ms ease-in;
   }
 
   .footer a:hover {
-    text-decoration: underline 2px black dotted;
+    color: #7c3aed;
   }
 }
 
 @media (hover: none) {
-  .about .content a:active {
-    text-decoration: underline 2px black dotted;
-  }
-
-  .about .ext-link:active {
-    background-color: #b8b8b8;
-  }
-
   .footer a:active {
-    text-decoration: underline 2px black dotted;
+    color: #7c3aed;
   }
 }
 
