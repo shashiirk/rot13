@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://shashiirk.github.io/fake-tweet-generator">
+  <a href="https://shashiirk.github.io/rot13">
     <img alt="logo" src="assets/favicon/logo.svg" width="60" />
   </a>
 </p>
