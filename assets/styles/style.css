@@ -130,9 +130,9 @@ a {
 }
 
 .footer {
+  color: #6b7280;
   padding: 32px 16px;
   font-size: 14px;
-  font-weight: 400;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -145,7 +145,7 @@ a {
 .footer .dot {
   width: 3px;
   height: 3px;
-  background-color: black;
+  background-color: #6b7280;
   border-radius: 50%;
   margin: 0 6px;
 }
